@@ -1,36 +1,41 @@
-# Ignore Python virtual environment
+# Python
 venv/
+.venv/
 *.pyc
-__pycache__/
 *.pyo
 *.pyd
+__pycache__/
 
-# Ignore logs and runtime files
+# Logs
 logs/
 *.log
 
-# Ignore data and model files
+# Data & Models
 data/models/*
 !data/models/.gitkeep
 
-# Ignore database files
+# DB
 db/*
 !db/.gitkeep
 
-# Ignore reports
+# Reports
 reports/*
 !reports/.gitkeep
 
-# Ignore pytest cache
+# Pytest
 .pytest_cache/
 
-# Ignore VS Code settings
+# IDE
 .vscode/
+.ipynb_checkpoints/
 
-# Ignore system files
+# System
 .DS_Store
 Thumbs.db
 
-# Ignore credentials and sensitive files
+# Streamlit
+.streamlit/config.toml
+
+# Secrets
 config/credentials.yaml
 *.env

@@ -1,0 +1,35 @@
+# Settings for NeuroSniper trading system
+# Configures trading parameters, Safe Mode, and external services
+
+safe_mode:
+  enabled: true
+  internet_check:
+    enabled: true
+    min_download_mbps: 5
+    max_ping_ms: 150 # Increased from 100
+  news_sentiment: positive
+  vix_threshold: 15
+  trading_cutoff_time: "15:30"
+  max_trades_per_day: 3
+  confidence_threshold: 0.9
+
+trading:
+  instruments:
+    - NIFTY
+    - BANKNIFTY
+    - FINNIFTY
+    - MIDCPNIFTY
+  strategies:
+    - rsi_strategy
+    - fvg_strategy
+    - seasonality_strategy
+  max_risk_per_trade: 0.02
+  position_sizing: fixed
+  fixed_lot_size: 50
+
+telegram:
+  alerts_enabled: true
+  alert_types:
+    - trade_execution
+    - safe_mode_trigger
+    - system_health
